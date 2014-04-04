@@ -1,0 +1,118 @@
+% Začetek preambule
+\documentclass[a4paper, 12pt]{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsfonts}
+
+% Moji ukazi, okolja,...
+% oznake za števila
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+% opombe
+\newenvironment{opomba}{\begin{flushleft} \textbf{Opomba}:}{\hfill \end{flushleft}}
+% definicije
+\newcounter{definitionCounter}
+\addtocounter{definitionCounter}{1}
+\newenvironment{definicija}{\begin{flushleft} \textit{\textbf{Definicija \arabic{definitionCounter}}}:}{\hfill \end{flushleft}\stepcounter{definitionCounter}}
+% pojmi
+\newcommand{\pojem}[1]{\textsc{#1}}
+% dokazi
+\newenvironment {dokaz}{\begin{flushleft} \textit{\textbf{Dokaz}}:}{\hfill $\square$\end{flushleft}}
+% izreki
+\newcounter{theoremCounter}
+\addtocounter{theoremCounter}{1}
+\newcounter{theoremCorollaryCounter}
+\addtocounter{theoremCorollaryCounter}{0}
+\newenvironment {izrek}{\begin{flushleft} \textsf{\textbf{IZREK \arabic{theoremCounter}}}:}{\hfill \end{flushleft}\stepcounter{theoremCounter}\stepcounter{theoremCorollaryCounter}\setcounter{corollaryCounter}{1}}
+% leme
+\newcounter{lemmaCounter}
+\addtocounter{lemmaCounter}{1}
+\newenvironment{lema}{\begin{flushleft} \textbf{Lema \arabic{lemmaCounter}}:}{\hfill \end{flushleft}\stepcounter{lemmaCounter}}
+% posledice
+\newcounter{corollaryCounter}
+\addtocounter{corollaryCounter}{1}
+\newenvironment  {posledica}{\begin{flushleft} \textsf{\textbf{Posledica \arabic{theoremCorollaryCounter}.\arabic{corollaryCounter}}}:}{\hfill \end{flushleft}\stepcounter{corollaryCounter}}
+% dodatni ukazi
+\usepackage{hyperref} % mora biti zadnji
+
+% začetek dokumenta
+\begin{document}
+\begin{flushright}
+Klemen Pavlič
+
+27122002
+\end{flushright}
+\begin{center}
+Funkcionalna analiza
+\end{center}
+\begin{center}
+PRVA DOMAČA NALOGA
+\end{center}
+
+\begin{flushleft}
+1. naloga
+\end{flushleft}
+Na Banachovem prostoru $\mathcal{C}[0,1]$ je definirana preslikava $A$ s predpisom
+$$
+(Af)(x) = (x-x^2) \int_{0}^x f(t) dt.
+$$
+\begin{enumerate}
+\item[(a)] Dokaži, da je $A$ dobro definiran omejen linearen operator in izračunaj njegovo normo.
+\item[(b)] Ali je operator $A$ injektiven?
+\item[(c)] Ali je operator $A$ obrnljiv?
+\end{enumerate}
+
+\begin{flushleft}
+2. naloga
+\end{flushleft}
+Naj bo $(X,\mathcal{A}, \mu )$ merljiv prostor, $1 \le p < \infty$ in $A\subseteq X$ merljiva podmnožica v $X$. Definirajmo
+$$
+L^p(A) = \{ f\in L^p(X): f = 0 \textrm{ skoraj povsod na } A^C\}.
+$$
+\begin{enumerate}
+\item[(a)] Dokaži, da je $L^p(A)$ zaprt podprostor v $L^p(X)$.
+\item[(b)] Kateremu prostoru je izometrično izomorfen $L^p(X) / L^p(A)$?
+\end{enumerate}
+
+\begin{flushleft}
+3. naloga
+\end{flushleft}
+Naj za vektorja $x$ in $y$ normiranega prostora velja $|| x+y|| = ||x|| + ||y||$. Dokaži, da za poljubni nenegativni števili $\alpha$ in $\beta$ velja
+$$
+||\alpha x + \beta y|| = \alpha ||x|| + \beta ||y||.
+$$
+
+\begin{flushleft}
+4. naloga
+\end{flushleft}
+Na normiranem prostoru $c_{00}$ (vseh vektorjev $x\in l^{\infty}$, ki imajo končno mnogo neničelnih komponent) je podano zaporedje $\{f_n\}_{n\in \N}$ linearnih funkcionalov s predpisom
+$$
+f_n(x_1,x_2,\dots) = n x_n.
+$$
+\begin{enumerate}
+\item[(a)] Dokaži, da je za vsak $x\in c_{00}$ zaporedje vektorjev $\{ f_n(x) \}_{n\in \N}$ omejeno.
+\item[(b)] Ali je zaporedje $\{ || f_n || \}_{n\in \N}$ omejeno?
+\item[(c)] Ali je to v protislovju z izrekom o enakomerni omejenosti?
+\end{enumerate}
+
+\begin{flushleft}
+5. naloga
+\end{flushleft}
+Naj bo $X$ Banachov prostor in $\mathcal{F}, \mathcal{G}$ števni podmnožici v $\mathcal{B}(X)$. Naj za vsak $x\in X$ obstajata taka operatorja $T\in \mathcal{F}$ in $S\in \mathcal{G}$, da je $Tx = Sx$. Dokaži, da je $\mathcal{F} \cap \mathcal{G} \neq \emptyset$.
+
+\begin{flushleft}
+6. naloga
+\end{flushleft}
+Naj bo $A:X\rightarrow Y$ surjektiven omejen linearen operator med Banachovima prostoroma $X$ in $Y$.
+\begin{enumerate}	
+\item[(a)] Dokaži, da obstaja taka konstanta $M> 0$, da za vsak $y\in Y$ obstaja vsaj en vektor $x\in X$, za katerega velja $Ax = y$ in $||x|| \le M ||y||$.
+\item[(b)] Naj bo $\{y_n\}_{n\in \N}$ zaporedje v $Y$, ki konvergira proti 0. Dokaži, da obstaja tako zaporedje $\{x_n\}_{n\in \N}$ v $X$, ki konvergira proti 0 in za vsak $n\in \N$ velja $Ax_n = y_n$.
+\end{enumerate}
+
+\end{document}
