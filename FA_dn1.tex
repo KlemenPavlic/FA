@@ -67,6 +67,7 @@ $$
 \item[(b)] Ali je operator $A$ injektiven?
 \item[(c)] Ali je operator $A$ obrnljiv?
 \end{enumerate}
+\emph{Rešitev}
 
 \begin{flushleft}
 2. naloga
@@ -79,6 +80,7 @@ $$
 \item[(a)] Dokaži, da je $L^p(A)$ zaprt podprostor v $L^p(X)$.
 \item[(b)] Kateremu prostoru je izometrično izomorfen $L^p(X) / L^p(A)$?
 \end{enumerate}
+\emph{Rešitev}
 
 \begin{flushleft}
 3. naloga
@@ -87,6 +89,19 @@ Naj za vektorja $x$ in $y$ normiranega prostora velja $|| x+y|| = ||x|| + ||y||$
 $$
 ||\alpha x + \beta y|| = \alpha ||x|| + \beta ||y||.
 $$
+\emph{Rešitev}
+\newline
+Predpostavimo lahko, da je $\alpha \ge \beta \ge 0$ (sicer zamenjamo vlogi). Potem velja 
+$$
+\alpha ||x|| + \beta ||y|| = ||\alpha x|| + ||\beta y|| \ge ||\alpha x + \beta y ||= ||\alpha x + \alpha y - \alpha y + \beta y||=
+$$
+$$
+||\alpha (x+y) - (\alpha - \beta)y|| \ge \Big| ||\alpha(x+y) || - ||(\alpha - \beta)y|| \Big| = \Big| \alpha||x+y|| - (\alpha - \beta) ||y|| \Big|=
+$$
+$$
+\Big| \alpha (||x|| + ||y||) - \alpha ||y|| + \beta ||y||\Big| = \Big| \alpha ||x|| + \beta ||y||\Big| = \alpha ||x|| + \beta ||y||.
+$$
+Sledi $||\alpha x + \beta y || = \alpha ||x|| + \beta ||y||$.
 
 \begin{flushleft}
 4. naloga
@@ -100,11 +115,16 @@ $$
 \item[(b)] Ali je zaporedje $\{ || f_n || \}_{n\in \N}$ omejeno?
 \item[(c)] Ali je to v protislovju z izrekom o enakomerni omejenosti?
 \end{enumerate}
+\emph{Rešitev}
+
 
 \begin{flushleft}
 5. naloga
 \end{flushleft}
 Naj bo $X$ Banachov prostor in $\mathcal{F}, \mathcal{G}$ števni podmnožici v $\mathcal{B}(X)$. Naj za vsak $x\in X$ obstajata taka operatorja $T\in \mathcal{F}$ in $S\in \mathcal{G}$, da je $Tx = Sx$. Dokaži, da je $\mathcal{F} \cap \mathcal{G} \neq \emptyset$.
+\newline
+\emph{Rešitev}
+
 
 \begin{flushleft}
 6. naloga
@@ -114,5 +134,6 @@ Naj bo $A:X\rightarrow Y$ surjektiven omejen linearen operator med Banachovima p
 \item[(a)] Dokaži, da obstaja taka konstanta $M> 0$, da za vsak $y\in Y$ obstaja vsaj en vektor $x\in X$, za katerega velja $Ax = y$ in $||x|| \le M ||y||$.
 \item[(b)] Naj bo $\{y_n\}_{n\in \N}$ zaporedje v $Y$, ki konvergira proti 0. Dokaži, da obstaja tako zaporedje $\{x_n\}_{n\in \N}$ v $X$, ki konvergira proti 0 in za vsak $n\in \N$ velja $Ax_n = y_n$.
 \end{enumerate}
+\emph{Rešitev}
 
 \end{document}
