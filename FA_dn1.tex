@@ -116,6 +116,13 @@ $$
 \item[(c)] Ali je to v protislovju z izrekom o enakomerni omejenosti?
 \end{enumerate}
 \emph{Rešitev}
+\begin{enumerate}
+\item[(a)] Naj bo $x=(x_1,x_2,\dots) \in c_{00}$. Naj bo $\mathcal{I}$ množica tistih indeksov, pri katerih ima vektor $x$ neničelne komponente, tj. $\mathcal{I} = \{ i \in \N; x_i \neq 0\}$. Potem je po predpostavki $|\mathcal{I} | < \infty$. Označimo z $M = \max \mathcal{I}$. Za člene zaporedja $\{f_n(x)\}_{n\in \N}$ velja $f_n(x) = 0$, če je $n\in \mathcal{I}^C$. V tem zaporedju je torej le končno mnogo neničenih členov (to so ravno tisti pri katerih je indeks $n\in \mathcal{I}$). Za te pa velja $|f_n(x)| = |nx_n| =n |x_n| \le M ||x||$. Sledi, da je zaporedje $\{f_n(x)\}_{n\in \N}$ omejeno za poljben $x\in c_{00}$.
+
+\item[(b)] Vemo, da je $||f_n|| = \sup\{|f_n(x)|, ||x||=1\}$. Naj bo vektor $e_i$ tak, da ima na $i$-tem mestu enico, povsod drugje pa ničle. Potem je jasno $e_i\in c_{00}$ in $||e_i||=1$. Ker je $|f_n(e_n)| = n\cdot 1$, je zagotovo $||f_n|| \ge n$. Ker to velja za vsak $n\in \N$, zaporedje $\{||f_n||\}_{n\in \N}$ ni omejeno.
+
+\item[(c)] To ni v protislovju z izrekom o enakomerni omejenosti, saj ta velja le za Banachove prostore. Trdim namreč, da prostor $c_{00}$ ni Banachov. To sledi, ker ni zaprt. Res, naj bo $x_{n} = (1,\frac{1}{2},\dots,\frac{1}{n},0,\dots)$. Potem je zaporedje $\{x_n\}_{n\in\N}$ zaporedje vektorjev iz $c_{00}$, ki očitno konvergira proti vektorju $x=(x_i)_{i\in \N}, x_i = \frac{1}{i}$, ki pa ni v $c_{00}$, saj nima le končno neničelnih komponent. 
+\end{enumerate}
 
 
 \begin{flushleft}
