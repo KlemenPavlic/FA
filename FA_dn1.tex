@@ -81,6 +81,18 @@ $$
 \item[(b)] Kateremu prostoru je izometrično izomorfen $L^p(X) / L^p(A)$?
 \end{enumerate}
 \emph{Rešitev}
+\begin{enumerate}
+\item[(a)] Pokažimo, da je $L^p(A)$ zaprt podprostor. Jasno je, da je podprostor. Pokažimo, da je zaprt. Naj bo $\{f_n\}_{n\in \N} \subseteq L^p(A)$ konvergentno zaporedje. Ker je $L^p(X)$ poln, obstaja $f\in L^p(X)$, da zaporedje $\{f_n\}_{n\in\N}$ konvergira proti $f$ v $p$-normi. To pomeni, da za vsak $\epsilon > 0$ obstaja $n_0$, da za vsak $n\ge n_0$ velja $||f_n - f||_p < \epsilon^{1/p}$ oziroma $||f_n - f||_p^p < \epsilon$. To pomeni, da je 
+$$
+\epsilon > \int_X |f_n - f|^p d\mu = \int_A |f_n - f|^p d\mu + \int_{A^C} |f_n-f|^pd\mu, 
+$$
+od koder sledi, da je 
+$$
+\epsilon > \int_{A^C} |f_n-f|^pd\mu = \int_{A^C} |f|^pd\mu, 
+$$
+kjer zadnji enačaj velja, ker so $f_n \in L^p(A)$. Ker je bil $\epsilon>0$ poljubno majhen to pomeni, da je $|f|$ enaka 0 skoraj povsod na $A^C$. Posledično je tudi $f$ enaka 0 skoraj povsod na $A^C$. Sledi, da je $f\in L^p(A)$ in zato je to zaprt podprostor. 
+\item[(b)] Trdim, da je $L^p(X) / L^p(A)$ izometrično izorfen $L^p(A^C)$, kjer je $L^p(A^C)=\{f\in \L^p(X): f=0\textrm{ skoraj povsod na } A\}$. Podobno kot zgoraj vidimo, da je tudi $L^p(A^C)$ zaprt podprostor $L^p(X)$ in zato Banachov.
+\end{enumerate}
 
 \begin{flushleft}
 3. naloga
