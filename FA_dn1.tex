@@ -91,7 +91,26 @@ $$
 \epsilon > \int_{A^C} |f_n-f|^pd\mu = \int_{A^C} |f|^pd\mu, 
 $$
 kjer zadnji enačaj velja, ker so $f_n \in L^p(A)$. Ker je bil $\epsilon>0$ poljubno majhen to pomeni, da je $|f|$ enaka 0 skoraj povsod na $A^C$. Posledično je tudi $f$ enaka 0 skoraj povsod na $A^C$. Sledi, da je $f\in L^p(A)$ in zato je to zaprt podprostor. 
-\item[(b)] Trdim, da je $L^p(X) / L^p(A)$ izometrično izorfen $L^p(A^C)$, kjer je $L^p(A^C)=\{f\in \L^p(X): f=0\textrm{ skoraj povsod na } A\}$. Podobno kot zgoraj vidimo, da je tudi $L^p(A^C)$ zaprt podprostor $L^p(X)$ in zato Banachov.
+
+\item[(b)] Trdim, da je $L^p(X) / L^p(A)$ izometrično izomorfen $L^p(A^C)$, kjer je $L^p(A^C)=\{f\in L^p(X): f=0\textrm{ skoraj povsod na } A\}$. Podobno kot zgoraj vidimo, da je tudi $L^p(A^C)$ zaprt podprostor $L^p(X)$ in zato Banachov.
+Definirajmo preslikavo
+$$
+\varphi:L^p(X) /L^p(A) \rightarrow L^p(A^C), \quad \varphi(f+L^p(A)) = f\chi_{A^C}.
+$$ 
+Trdim, da je ta preslikava izometrični izomorfizem. Ker je $A$ merljiva množica, je tudi $A^C$ merljiva. Sledi, da je karakteristična preslikava $\chi_{A^C}$ merljiva in ker je produkt merljivih preslikav spet merljiva, je tudi $f\chi_{A^C}$ merljiva. Iz predpisa je tudi razvidno, da $f\chi_{A^C}$ zadošča pogoju za pripadnost prostoru $L^p(A^C)$. Če za odseka velja $f_1 + L^p(A) = f_2 + L^p(A)$, je to ekvivalentno temu, da je $f_1 - f_2 \in L^p(A)$, kar pomeni, da je $f_1 - f_2 = 0$ skoraj povsod na $A^C$. Sledi, da je preslikava $\varphi$ res dobro definirana in da res slika v $L^p(A^C)$. Jasno je, da je $\varphi$ linearna. Če je $\varphi(f+L^p(A)) = f\chi_{A^C} = 0$, je $f=0$ skoraj povsod na $A^C$, torej je $f\in L^p(A)$. To implicira, da je $\varphi$ injektivna. Ker je $L^p(A^C)$ podprostor v $L^p(X)$, je $\varphi$ surjektivna. Res, za vsak $f\in L^p(A^C) \subseteq L^p(X)$ namreč velja $\varphi (f +L^p(A)) = f\chi_{A^C} = f$.
+Preveriti moramo le še, da je $\varphi$ res izometrija. Zadošča preveriti, da je 
+$$
+||f\chi_{A^C}||^p = ||\varphi(f+L^p(A))||^p = ||f+L^p(A)||^p = \inf\{||f-g||^p, g\in L^p(A)\}.
+$$
+Naj bo zdaj $g\in L^p(A)$ poljuben. Potem velja
+$$
+||f-g||^p = \int_X |f-g|^p d\mu = \int_A|f-g|^p d\mu + \int_{A^C} |f-g|^p d\mu.
+$$
+Če sedaj za $g$ izberemo $g=f\chi_A\in L^p(A)$, potem je zgornje naprej enako
+$$
+\int_A|f-f|^p d\mu + \int_{A^C} |f-0|^pd\mu = \int_{A^C}|f|^pd\mu = ||f\chi_{A^C}||^p.
+$$
+Sledi, da je $\varphi$ res izometrija.
 \end{enumerate}
 
 \begin{flushleft}
