@@ -104,13 +104,13 @@ $$
 $$
 Naj bo zdaj $g\in L^p(A)$ poljuben. Potem velja
 $$
-||f-g||^p = \int_X |f-g|^p d\mu = \int_A|f-g|^p d\mu + \int_{A^C} |f-g|^p d\mu.
+||f-g||^p = \int_X |f-g|^p d\mu = \int_A|f-g|^p d\mu + \int_{A^C} |f|^p d\mu.
 $$
-Če sedaj za $g$ izberemo $g=f\chi_A\in L^p(A)$, potem je zgornje naprej enako
+V zgornji vsoti želimo minimizirati še prvi sumand, zato izberemo optimalni element $g=f\chi_A\in L^p(A)$. Zgornja vsota je  naprej enaka
 $$
-\int_A|f-f|^p d\mu + \int_{A^C} |f-0|^pd\mu = \int_{A^C}|f|^pd\mu = ||f\chi_{A^C}||^p.
+\int_A|f-f|^p d\mu + \int_{A^C} |f|^pd\mu = \int_{A^C}|f|^pd\mu = ||f\chi_{A^C}||^p.
 $$
-Sledi, da je $\varphi$ res izometrija.
+Ker je bil izbrani $g$ optimalni v smislu, da minimizira normo $||f-h||$ po $h\in L^p(A)$, je $\varphi$ res izometrija.
 \end{enumerate}
 
 \begin{flushleft}
