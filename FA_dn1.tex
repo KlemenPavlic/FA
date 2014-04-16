@@ -69,9 +69,19 @@ $$
 \end{enumerate}
 \emph{Rešitev}
 \begin{enumerate}
-\item[(a)]
-\item[(b)] Denimo, da obstajata dve funckiji $f$ in $g$, da je $Af = Ag$. To pomeni, da za vsak $x\in [0,1]$ velja $(x-x^2) \int_0^x f(t)dt = (x-x^2) \int_0^xg(t)dt$. Od tod sledi, da mora biti $\int_0^x f(t)dt = \int_0^x g(t)dt$. Ker pa sta to odvedljivi funkciji, morati biti tudi njuna odvoda enaka. To implicira, da je $g(x) = f(x)$ za vsak $x\in[0,1]$, torej $g=f$. Sledi, da je $A$ injektiven operator.
-\item[(c)] Trdim, da $A$ ni obrnljiv. Če bi namreč bil, bi to impliciralo, da je tudi surjektiven, kar pa očitno ni, saj za vsako funkcijo v njegovi sliki velja, da je $Af(0) = 0$.
+\item[(a)]Ker je $f$ zvezna funkcija, integral $\int_0^x f(t)dt$ obstaja za vsak $x\in[0,1]$, velja še več, to je celo zvezna funkcija v spremenljivki $x$ (zgornja meja). Ker je tudi $x-x^2$ zvezna funkcija, je $Af$ zvezna, saj je produkt dveh zveznih funkcij. Sledi, da operator $A$ res slika v prostor $\mathcal{C}[0,1]$. Ker pa je še integral linearen, lahko zaključimo, da je $A$ dobro definiran linearen operator. Velja še 
+$$
+|Af(x)| = |(x-x^2)\int_0^x f(t)dt| = |x-x^2| |\int_0^x f(t)dt| \le
+$$
+$$
+(x-x^2)||f||_{\infty} \int_0^x 1 dt= (x^2 - x^3) ||f||_{\infty} \le \frac{4}{27} ||f||_{\infty}.
+$$
+Pripomnimo še, da zadnji neenačaj velja, ker ima funkcija $x\mapsto x^2 - x^3$ v točki $x=\frac{2}{3}$ maksimum. Tam doseže vrednost $\frac{4}{27}$. To se z lahkoto poračuna, zato bom ta delček izpustil.
+ Zgornja ocena nam pove še, da je operator $A$ omejen in da je $||A|| \le \frac{4}{27}$. Velja $A1(x) = x^2 - x^3$ in enak premislek kot zgoraj nam pove, da je $||A1|| = \max\{x^2 - x^3, x\in[0,1]\}=\frac{4}{27}$. To implicira še $||A||\ge \frac{4}{27}$. Zaključimo, da je $||A||=\frac{4}{27}$.
+
+\item[(b)] Denimo, da obstajata dve funckiji $f$ in $g$, da je $Af = Ag$. To pomeni, da za vsak $x\in [0,1]$ velja $(x-x^2) \int_0^x f(t)dt = (x-x^2) \int_0^xg(t)dt$. Od tod sledi, da mora biti že $\int_0^x f(t)dt = \int_0^x g(t)dt$. Ker pa sta to odvedljivi funkciji, morati biti tudi njuna odvoda enaka. To implicira, da je $g(x) = f(x)$ za vsak $x\in[0,1]$, torej $g=f$. Sledi, da je $A$ injektiven operator.
+
+\item[(c)] Trdim, da $A$ ni obrnljiv. Če bi namreč bil, bi to impliciralo, da je tudi surjektiven, kar pa očitno ni, saj za vsako funkcijo v njegovi sliki velja, da ima v točki $x=0$ vrednost 0.
 \end{enumerate}
 
 \begin{flushleft}
