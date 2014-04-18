@@ -195,7 +195,8 @@ Naj bo $A:X\rightarrow Y$ surjektiven omejen linearen operator med Banachovima p
 Operator $\tilde{A}$ je torej dobro definiran omejen linearen bijektiven operator med Banachovima prostoroma $X/\ker A$ in $Y$. Po posledici izreka o odprti preslikavi je torej $\tilde{A}^{-1} : Y\rightarrow X/\ker A$ omejen operator.
 Naj bo zdaj $0\neq y\in Y$ poljuben. Od zgoraj vemo, da obstaja $0\neq x\in X$, da je $\tilde{A}^{-1} y = x+ \ker A$.
 Naj bo zdaj še $\epsilon >0$. Enako kot zgoraj vidimo, da obstaja $z_x \in \ker A$, da je $||x+\ker A|| \le ||x+z_x|| \le (1+\epsilon)||x+\ker A||$. Upoštevamo to zgoraj in dobimo $||x+z_x|| \le (1+\epsilon) ||x+\ker A|| = (1+\epsilon) ||\tilde{A}^{-1}y|| \le (1+\epsilon) ||	\tilde{A}^{-1}|| \cdot ||y||$. Iskani $x_y\in X$ je torej $x_y = x+z_x$. Zanj potem velja $||x_y|| \le (1+\epsilon)||\tilde{A}^{-1}|| ||y||$ in $Ax_y = A(x+z_x) = Ax + 0 = y$. Če pa je $y=0$, pa lahko za iskani $x_y$ prav tako izberemo $x_y = 0$. Ta očitno zadošča zahtevam naloge.  Za iskano konstanto $M$ torej izberemo $M = (1+\epsilon)||\tilde{A}^{-1}||$, pri čemer je to neničelna konstanta, ker je $\tilde{A}^{-1}$ omejen obrnljiv operator.
-\item[(b)]
+
+\item[(b)] Naj bo zdaj $\{y_n\}_{n\in \N} \subseteq Y$ poljubno zaporedje, ki konvergira proti  0. Po točki (a) za vsak $n\in \N$ obstaja $x_n\in X$, da je $Ax_n = y_n$ in $||x_n|| \le M ||y_n||$. Iz druge neenakosti pa sledi še, da $x_n$ konvergirajo proti 0. Naj bo $\epsilon >0$. Ker zaporedje $\{y_n\}_{n\in\N}$ konvergira proti 0, obstaja $n_0$, tako da za vsak $n\ge n_0$ velja $||y_n - 0|| = ||y_n|| < \epsilon / M$. Potem za vsak $n \ge n_0$ velja, da je $||x_n - 0|| = ||x_n||  \le M ||y_n|| < M \cdot \epsilon/M = \epsilon$.
 \end{enumerate}
 
 \end{document}
