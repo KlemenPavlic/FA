@@ -69,7 +69,7 @@ $$
 \end{enumerate}
 \emph{Rešitev}
 \begin{enumerate}
-\item[(a)]Ker je $f$ zvezna funkcija, integral $\int_0^x f(t)dt$ obstaja za vsak $x\in[0,1]$, velja še več, to je celo zvezna funkcija v spremenljivki $x$ (zgornja meja). Ker je tudi $x-x^2$ zvezna funkcija, je $Af$ zvezna, saj je produkt dveh zveznih funkcij. Sledi, da operator $A$ res slika v prostor $\mathcal{C}[0,1]$. Ker pa je še integral linearen, lahko zaključimo, da je $A$ dobro definiran linearen operator. Velja še 
+\item[(a)]Vemo, da je  $x\mapsto \int_0^x f(t)dt$ zvezna funkcija. Ker je tudi $x\mapsto x-x^2$ zvezna funkcija, je $Af$ zvezna, saj je produkt dveh zveznih funkcij. Sledi, da operator $A$ res slika v prostor $\mathcal{C}[0,1]$. Ker pa je še integral linearen, lahko zaključimo, da je $A$ dobro definiran linearen operator. Velja še 
 $$
 |Af(x)| = |(x-x^2)\int_0^x f(t)dt| = |x-x^2| |\int_0^x f(t)dt| \le
 $$
@@ -79,7 +79,7 @@ $$
 Pripomnimo še, da zadnji neenačaj velja, ker ima funkcija $x\mapsto x^2 - x^3$ v točki $x=\frac{2}{3}$ maksimum. Tam doseže vrednost $\frac{4}{27}$. To se z lahkoto poračuna, zato bom ta delček izpustil.
  Zgornja ocena nam pove še, da je operator $A$ omejen in da je $||A|| \le \frac{4}{27}$. Velja $A1(x) = x^2 - x^3$ in enak premislek kot zgoraj nam pove, da je $||A1|| = \max\{x^2 - x^3, x\in[0,1]\}=\frac{4}{27}$. To implicira še $||A||\ge \frac{4}{27}$. Zaključimo, da je $||A||=\frac{4}{27}$.
 
-\item[(b)] Denimo, da obstajata dve funckiji $f$ in $g$, da je $Af = Ag$. To pomeni, da za vsak $x\in [0,1]$ velja $(x-x^2) \int_0^x f(t)dt = (x-x^2) \int_0^xg(t)dt$. Od tod sledi, da mora biti že $\int_0^x f(t)dt = \int_0^x g(t)dt$. Ker pa sta to odvedljivi funkciji, morati biti tudi njuna odvoda enaka. To implicira, da je $g(x) = f(x)$ za vsak $x\in[0,1]$, torej $g=f$. Sledi, da je $A$ injektiven operator.
+\item[(b)] Denimo, da obstajata dve funckiji $f$ in $g$, da je $Af = Ag$. To pomeni, da za vsak $x\in [0,1]$ velja $(x-x^2) \int_0^x f(t)dt = (x-x^2) \int_0^xg(t)dt$. Ker to velja za vsak $x$, mora biti že $\int_0^x f(t)dt = \int_0^x g(t)dt$. Ker pa sta to odvedljivi funkciji, morati biti tudi njuna odvoda enaka. To implicira, da je $g(x) = f(x)$ za vsak $x\in[0,1]$, torej $g=f$. Sledi, da je $A$ injektiven operator.
 
 \item[(c)] Trdim, da $A$ ni obrnljiv. Če bi namreč bil, bi to impliciralo, da je tudi surjektiven, kar pa očitno ni, saj za vsako funkcijo v njegovi sliki velja, da ima v točki $x=0$ vrednost 0.
 \end{enumerate}
@@ -163,7 +163,7 @@ $$
 \end{enumerate}
 \emph{Rešitev}
 \begin{enumerate}
-\item[(a)] Naj bo $x=(x_1,x_2,\dots) \in c_{00}$. Naj bo $\mathcal{I}$ množica tistih indeksov, pri katerih ima vektor $x$ neničelne komponente, tj. $\mathcal{I} = \{ i \in \N; x_i \neq 0\}$. Potem je po predpostavki $|\mathcal{I} | < \infty$. Označimo z $M = \max \mathcal{I}$. Za člene zaporedja $\{f_n(x)\}_{n\in \N}$ velja $f_n(x) = 0$, če je $n\in \mathcal{I}^C$. V tem zaporedju je torej le končno mnogo neničenih členov (to so ravno tisti pri katerih je indeks $n\in \mathcal{I}$). Za te pa velja $|f_n(x)| = |nx_n| =n |x_n| \le M ||x||$. Sledi, da je zaporedje $\{f_n(x)\}_{n\in \N}$ omejeno za poljben $x\in c_{00}$.
+\item[(a)] Naj bo $x=(x_1,x_2,\dots) \in c_{00}$ poljuben. Naj bo $\mathcal{I}$ množica tistih indeksov, pri katerih ima vektor $x$ neničelne komponente, tj. $\mathcal{I} = \{ i \in \N; x_i \neq 0\}$. Potem je po predpostavki $|\mathcal{I} | < \infty$. Označimo z $M = \max \mathcal{I}$. Za člene zaporedja $\{f_n(x)\}_{n\in \N}$ velja $f_n(x) = 0$, če je $n\in \mathcal{I}^C$. V tem zaporedju je torej le končno mnogo neničenih členov (to so ravno tisti pri katerih je indeks $n\in \mathcal{I}$). Za te pa velja $|f_n(x)| = |nx_n| =n |x_n| \le M ||x||$. Sledi, da je zaporedje $\{f_n(x)\}_{n\in \N}$ omejeno.
 
 \item[(b)] Vemo, da je $||f_n|| = \sup\{|f_n(x)|, ||x||=1\}$. Naj bo vektor $e_i$ tak, da ima na $i$-tem mestu enico, povsod drugje pa ničle. Potem je jasno $e_i\in c_{00}$ in $||e_i||=1$. Ker je $|f_n(e_n)| = n\cdot 1$, je zagotovo $||f_n|| \ge n$. Ker to velja za vsak $n\in \N$, zaporedje $\{||f_n||\}_{n\in \N}$ ni omejeno.
 
@@ -178,7 +178,7 @@ Naj bo $X$ Banachov prostor in $\mathcal{F}, \mathcal{G}$ števni podmnožici v 
 \newline
 \emph{Rešitev}
 \newline
-Označimo s $T_i, i=1,2,\dots,$ elemente množice $\mathcal{F}$ in s $S_j, j=1,2,\dots$, elemente množice $\mathcal{G}$. Definiramo množice $A_{ij} = \{x\in X: T_i x = S_jx\} = \ker(T_i - S_j)$. Množice $A_{ij}$ so zaprte, saj gre ravno za jedro omejenega linearnega operatorja $T_i-S_j$. Očitno jih je tudi števno. Ker za vsak $x\in X$ obstajata operatorja $T_i$ in $S_j$, da je $T_i x = S_j x$, velja še $\cup_{i,j=1}^{\infty} A_{ij} = X$. Po posledici Baireovega izreka obstajata indeksa $i_0, j_0$, da ima množica $A_{i_0 j_0}$ neprazno notranjost, torej vsebuje neko odprto kroglo $K(x_0,r),r>0$. Na njej se operatorja $T_{i_0}$ in $S_{j_0}$ ujemata. Naj bo sedaj $x\in K(0,r)$. Tedaj je $T_{i_0} x = T_{i_0}(x_0 + x - x_0)= T_{i_0} (x_0 + x) - T_{i_0}(x_0)= S_{j_0}(x_0+x)-S_{j_0}(x_0) = S_{j_0}(x)$, torej se operatorja $T_{i_0}$ in $S_{j_0}$ ujemata na odprti krogli $K(0,r)$. Naj bo zdaj še $x\in X$ poljuben. Tedaj je $T_{i_0}x = \frac{2||x||}{r}T_{i_0}(\frac{r}{2||x||}x) =\frac{2||x||}{r}S_{j_0}(\frac{r}{2||x||}x) = S_{j_0}x$, kar pomeni, da se $T_{i_0}$ in $S_{j_0}$ ujemata na celem $X$. To pomeni, da sta enaka, torej je $T_{i_0} = S_{j_0}\in \mathcal{F}\cap \mathcal{G}\neq \emptyset$. 
+Označimo s $T_i, i=1,2,\dots,$ elemente množice $\mathcal{F}$ in s $S_j, j=1,2,\dots$, elemente množice $\mathcal{G}$. Definiramo množice $A_{ij} = \{x\in X: T_i x = S_jx\} = \ker(T_i - S_j)$. Množice $A_{ij}$ so zaprte, saj gre ravno za jedro omejenega linearnega operatorja $T_i-S_j$. Očitno jih je tudi števno. Ker za vsak $x\in X$ obstajata operatorja $T_i$ in $S_j$, da je $T_i x = S_j x$, velja še $\cup_{i,j=1}^{\infty} A_{ij} = X$. Po posledici Baireovega izreka obstajata indeksa $i_0, j_0$, da ima množica $A_{i_0 j_0}$ neprazno notranjost, torej vsebuje neko odprto kroglo $K(x_0,r),r>0$ (saj $X$ vsebuje odprto kroglo in je $X=\cup_{i,j=1}^{\infty} A_{i,j}$). Na njej se operatorja $T_{i_0}$ in $S_{j_0}$ ujemata. Naj bo sedaj $x\in K(0,r)$. Tedaj je $T_{i_0} x = T_{i_0}(x_0 + x - x_0)= T_{i_0} (x_0 + x) - T_{i_0}(x_0)= S_{j_0}(x_0+x)-S_{j_0}(x_0) = S_{j_0}(x)$, torej se operatorja $T_{i_0}$ in $S_{j_0}$ ujemata na odprti krogli $K(0,r)$. Naj bo zdaj še $x\in X$ poljuben. Tedaj je $T_{i_0}x = \frac{2||x||}{r}T_{i_0}(\frac{r}{2||x||}x) =\frac{2||x||}{r}S_{j_0}(\frac{r}{2||x||}x) = S_{j_0}x$, kar pomeni, da se $T_{i_0}$ in $S_{j_0}$ ujemata na celem $X$. To pomeni, da sta enaka, torej je $T_{i_0} = S_{j_0}\in \mathcal{F}\cap \mathcal{G}\neq \emptyset$. 
 
 
 \begin{flushleft}
